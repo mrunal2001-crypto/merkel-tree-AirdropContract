@@ -10,7 +10,7 @@ import { ECDSA } from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
  * @author Mrunal more
  */
 
-contract MerkelAirdrop is EIP712 {
+contract MerkleAirdrop is EIP712 {
     using SafeERC20 for IERC20;
 
     error MerkelAirdrop__InvalidProof();
@@ -67,6 +67,7 @@ contract MerkelAirdrop is EIP712 {
            })
         ))); 
     }
+    //cast call 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512 "getMessageHash(address, uint256)" 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 25000000000000000000 --rpc-url http://localhost:8545
 
     function getMerkelRoot () external view returns(bytes32){
         return i_merkleRoot;
